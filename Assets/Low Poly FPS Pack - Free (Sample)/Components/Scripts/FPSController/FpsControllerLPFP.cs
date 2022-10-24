@@ -21,7 +21,6 @@ namespace FPSControllerLPFP
         private Vector3 normalVector = Vector3.up;
         public Transform playerCam;
 
-
         [Header("Arms")]
         [Tooltip("The transform component that holds the gun camera."), SerializeField]
         public Transform arms;
@@ -80,9 +79,6 @@ namespace FPSControllerLPFP
         private readonly RaycastHit[] _groundCastResults = new RaycastHit[8];
         private readonly RaycastHit[] _wallCastResults = new RaycastHit[8];
 
-        /// Initializes the FpsController on start.
-        /// 
-
         private void WallRunInput() //make sure to call in void Update
         {
             //Wallrun
@@ -91,7 +87,7 @@ namespace FPSControllerLPFP
         }
         private void StartWallrun()
         {
-            Debug.Log("Should Wallrun");
+            //Debug.Log("Should Wallrun");
             _rigidbody.useGravity = false;
             isWallRunning = true;
             _canDoubleJump = true;

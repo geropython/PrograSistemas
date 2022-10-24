@@ -22,7 +22,7 @@ public class Actor : MonoBehaviour, IDamageable
         soundManager.PlaySound("piu");
         if (_currentLife <= 0)
         {
-            Debug.Log($"{name} DIED! :(");
+            //Debug.Log($"{name} DIED! :(");
             Die();
         }
     }
