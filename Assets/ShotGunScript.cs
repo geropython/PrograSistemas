@@ -444,8 +444,7 @@ public class ShotGunScript : MonoBehaviour
 
 	private void AnimationCheck()
 	{
-		if (anim.GetCurrentAnimatorStateInfo(0).IsName("Reload Out Of Ammo") ||
-			anim.GetCurrentAnimatorStateInfo(0).IsName("Reload Ammo Left"))
+		if (anim.GetCurrentAnimatorStateInfo(0).IsName("Reload Out Of Ammo") || anim.GetCurrentAnimatorStateInfo(0).IsName("Reload Ammo Left"))
 		{
 			isReloading = true;
 		}
