@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4859093804446741613}
   - component: {fileID: 4859093804446741610}
   - component: {fileID: 4859093804446741611}
-  m_Layer: 9
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,6 +28,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.5500002, z: 0.13499999}
   m_LocalScale: {x: 0.633998, y: 0.18274, z: 0.97720516}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4859093805432904392}
   m_RootOrder: 1
@@ -99,7 +100,7 @@ GameObject:
   - component: {fileID: 4859093805432904406}
   - component: {fileID: 4859093805432904407}
   - component: {fileID: -5817848383993502962}
-  m_Layer: 9
+  m_Layer: 6
   m_Name: enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -116,6 +117,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 15.6, y: 3.52, z: -44.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6270665593215095242}
   - {fileID: 4859093804446741613}
@@ -259,6 +261,9 @@ MonoBehaviour:
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 256
+  whatIsEnemy:
+    serializedVersion: 2
+    m_Bits: 64
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointSet: 0
   walkPointRange: 5
@@ -268,11 +273,13 @@ MonoBehaviour:
   attackRange: 5
   sightWhenChasingRange: 10
   actualSightRange: 0
+  alarmRange: 20
   playerInSightRange: 0
   playerInAttackRange: 0
+  enemyAlarmRange: 0
 --- !u!95 &-5817848383993502962
 Animator:
-  serializedVersion: 3
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -285,6 +292,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -299,7 +307,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4859093805784941685}
   - component: {fileID: 4859093805784941684}
-  m_Layer: 9
+  m_Layer: 6
   m_Name: GunHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -316,6 +324,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4863595928752303321}
   m_Father: {fileID: 4859093805432904392}
@@ -392,9 +401,65 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6903650204625814817, guid: 018beba761be1d84a8eb8803ec99271c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6903650204625814819, guid: 018beba761be1d84a8eb8803ec99271c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6903650204625814821, guid: 018beba761be1d84a8eb8803ec99271c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6903650204625814823, guid: 018beba761be1d84a8eb8803ec99271c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6903650204625814825, guid: 018beba761be1d84a8eb8803ec99271c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6903650204625814827, guid: 018beba761be1d84a8eb8803ec99271c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6903650204625814829, guid: 018beba761be1d84a8eb8803ec99271c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6903650204625814831, guid: 018beba761be1d84a8eb8803ec99271c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6903650204625814837, guid: 018beba761be1d84a8eb8803ec99271c, type: 3}
       propertyPath: m_Name
       value: Robo1Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 6903650204625814837, guid: 018beba761be1d84a8eb8803ec99271c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6903650204625814839, guid: 018beba761be1d84a8eb8803ec99271c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6903650204625814841, guid: 018beba761be1d84a8eb8803ec99271c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6903650204625814843, guid: 018beba761be1d84a8eb8803ec99271c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6903650204625814845, guid: 018beba761be1d84a8eb8803ec99271c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6903650204625814847, guid: 018beba761be1d84a8eb8803ec99271c, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6903650204635313903, guid: 018beba761be1d84a8eb8803ec99271c, type: 3}
       propertyPath: m_ApplyRootMotion
@@ -417,15 +482,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 565569876, guid: ee329c3cd08e58645834d20702d7f6c6, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1324608018887474, guid: ee329c3cd08e58645834d20702d7f6c6, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1452442627303592, guid: ee329c3cd08e58645834d20702d7f6c6, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1487774384131766, guid: ee329c3cd08e58645834d20702d7f6c6, type: 3}
       propertyPath: m_Name
@@ -433,11 +498,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1487774384131766, guid: ee329c3cd08e58645834d20702d7f6c6, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1927369336514790, guid: ee329c3cd08e58645834d20702d7f6c6, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4519716788627816, guid: ee329c3cd08e58645834d20702d7f6c6, type: 3}
       propertyPath: m_RootOrder

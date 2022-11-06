@@ -9,6 +9,9 @@ TagManager:
   - Bullet
   - Wall
   - Boss
+  - Target
+  - Metal
+  - ExplosiveBarrel
   layers:
   - Default
   - TransparentFX
