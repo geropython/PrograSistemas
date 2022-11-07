@@ -10,6 +10,14 @@ namespace FPSControllerLPFP
     [RequireComponent(typeof(AudioSource))]
     public class FpsControllerLPFP : MonoBehaviour
     {
+        private Rigidbody _rigidbody;
+        private CapsuleCollider _collider;
+        private AudioSource _audioSource;
+        private SmoothRotation _rotationX;
+        private SmoothRotation _rotationY;
+        private SmoothVelocity _velocityX;
+        private SmoothVelocity _velocityZ;
+        private bool _isGrounded, _canDoubleJump;
         public LayerMask whatIsWall;
         public float wallrunForce, maxWallrunTime, maxWallSpeed;
         bool isWallRight, isWallLeft;
@@ -67,14 +75,7 @@ namespace FPSControllerLPFP
         private FpsInput input;
 #pragma warning restore 649
 
-        private Rigidbody _rigidbody;
-        private CapsuleCollider _collider;
-        private AudioSource _audioSource;
-        private SmoothRotation _rotationX;
-        private SmoothRotation _rotationY;
-        private SmoothVelocity _velocityX;
-        private SmoothVelocity _velocityZ;
-        private bool _isGrounded, _canDoubleJump;
+   
 
         private readonly RaycastHit[] _groundCastResults = new RaycastHit[8];
         private readonly RaycastHit[] _wallCastResults = new RaycastHit[8];

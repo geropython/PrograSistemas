@@ -28,7 +28,6 @@ public class DashScript : MonoBehaviour
                 soundManager.PlaySound("dash");
             }
         }
-
     }
 
     private void FixedUpdate()
