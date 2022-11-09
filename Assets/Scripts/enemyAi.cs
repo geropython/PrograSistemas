@@ -9,7 +9,7 @@ public class enemyAi : MonoBehaviour
 
     public Transform player;
 
-    public LayerMask whatIsGround, whatIsPlayer;
+    public LayerMask whatIsGround, whatIsPlayer, whatIsEnemy;
 
     Bot botReference;
 
@@ -24,10 +24,14 @@ public class enemyAi : MonoBehaviour
     public GameObject projectile;
 
     //states
-    public float sightRange, attackRange, sightWhenChasingRange, actualSightRange;
-    public bool playerInSightRange, playerInAttackRange;
+    public float sightRange, attackRange, sightWhenChasingRange, actualSightRange, alarmRange;
+    public bool playerInSightRange, playerInAttackRange, enemyAlarmRange;
+
 
     Animator anim;
+
+
+    bool forceFollowPlayer;
 
     private void Awake()
     {
@@ -36,6 +40,11 @@ public class enemyAi : MonoBehaviour
         anim = GetComponent<Animator>();
         botReference = GetComponent<Bot>();
         actualSightRange = sightRange;
+    }
+
+    private void Start()
+    {
+        botReference.OnTakenDamage += TakenDamage;
     }
 
     private void Update()
@@ -47,7 +56,7 @@ public class enemyAi : MonoBehaviour
         if (!botReference.isDead)
         {
             if (!playerInSightRange && !playerInAttackRange) Patroling();
-            if (playerInSightRange && !playerInAttackRange) ChasePlayer();
+            if (playerInSightRange && !playerInAttackRange || forceFollowPlayer) ChasePlayer();
             if (playerInSightRange && playerInAttackRange) AttackPlayer();
         }
         else
@@ -100,6 +109,28 @@ public class enemyAi : MonoBehaviour
         anim.SetBool("Aim", false);
 
         agent.SetDestination(player.position);
+
+
+        var enemies = Physics.OverlapSphere(transform.position, alarmRange, whatIsEnemy);
+        if (enemies.Length > 0)
+        {
+            foreach (var enemie in enemies)
+            {
+                enemie.GetComponent<enemyAi>()?.SetForceFollowPlayer();
+            }
+        }
+    }
+    private void TakenDamage()
+    {
+        forceFollowPlayer = true;
+        Debug.Log("damage from enemyai");
+        ChasePlayer();
+        Invoke(nameof(SetForceFollowPlayer), 2f);
+    }
+
+    private void SetForceFollowPlayer()
+    {
+        forceFollowPlayer = false;
     }
     private void AttackPlayer()
     {
