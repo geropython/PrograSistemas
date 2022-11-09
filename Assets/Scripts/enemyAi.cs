@@ -53,6 +53,10 @@ public class enemyAi : MonoBehaviour
         playerInSightRange = Physics.CheckSphere(transform.position, actualSightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
 
+        //ampliar rango del chaseplayer
+        //pasar los estados en un manager  o una entidad
+        //patrolControler vigilantController
+
         if (!botReference.isDead)
         {
             if (!playerInSightRange && !playerInAttackRange) Patroling();
