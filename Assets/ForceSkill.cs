@@ -2,16 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ExplodeSkill : MonoBehaviour
+public class ForceSkill : MonoBehaviour
 {
     public float radiusExplotion = 5f;
     [SerializeField] public float force;
-
-
-    void Start()
-    {
-       
-    }
 
     void Update()
     {
@@ -23,7 +17,6 @@ public class ExplodeSkill : MonoBehaviour
 
     private void Explode()
     {
-        Debug.Log("Boom");
         //Instantiate(, transform.position, transform.rotation);mostrar effecto
         Collider[] colliders = Physics.OverlapSphere(transform.position, radiusExplotion);
         foreach (Collider nearbyObjects in colliders)
