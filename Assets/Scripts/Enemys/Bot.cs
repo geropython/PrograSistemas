@@ -3,7 +3,6 @@ using UnityEngine;
 public class Bot : Actor
 {
     public Action OnTakenDamage;
-
     Animator anim;
     public bool isDead = false;
 

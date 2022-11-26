@@ -6258,12 +6258,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1039771801}
     - target: {fileID: 4859093805432904407, guid: af5edd83767c6854a9028ebb99bb8f9a, type: 3}
-      propertyPath: sightRange
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 4859093805432904407, guid: af5edd83767c6854a9028ebb99bb8f9a, type: 3}
-      propertyPath: attackRange
-      value: 12
+      propertyPath: alarmRange
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4859093805432904407, guid: af5edd83767c6854a9028ebb99bb8f9a, type: 3}
       propertyPath: whatIsGround.m_Bits
@@ -12903,16 +12899,8 @@ PrefabInstance:
       value: enemy
       objectReference: {fileID: 0}
     - target: {fileID: 4859093805432904407, guid: af5edd83767c6854a9028ebb99bb8f9a, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1039771801}
-    - target: {fileID: 4859093805432904407, guid: af5edd83767c6854a9028ebb99bb8f9a, type: 3}
-      propertyPath: sightRange
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 4859093805432904407, guid: af5edd83767c6854a9028ebb99bb8f9a, type: 3}
-      propertyPath: attackRange
-      value: 12
+      propertyPath: alarmRange
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4859093805432904407, guid: af5edd83767c6854a9028ebb99bb8f9a, type: 3}
       propertyPath: whatIsGround.m_Bits
@@ -14026,12 +14014,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1039771801}
     - target: {fileID: 4859093805432904407, guid: af5edd83767c6854a9028ebb99bb8f9a, type: 3}
-      propertyPath: sightRange
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 4859093805432904407, guid: af5edd83767c6854a9028ebb99bb8f9a, type: 3}
-      propertyPath: attackRange
-      value: 12
+      propertyPath: alarmRange
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4859093805432904407, guid: af5edd83767c6854a9028ebb99bb8f9a, type: 3}
       propertyPath: whatIsGround.m_Bits

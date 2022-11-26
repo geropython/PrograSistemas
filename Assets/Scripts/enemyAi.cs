@@ -27,7 +27,9 @@ public class enemyAi : MonoBehaviour
     public float sightRange, attackRange, sightWhenChasingRange, actualSightRange, alarmRange;
     public bool playerInSightRange, playerInAttackRange, enemyAlarmRange;
 
+
     Animator anim;
+
 
     bool forceFollowPlayer;
 
@@ -50,6 +52,10 @@ public class enemyAi : MonoBehaviour
         //check sight/attack range
         playerInSightRange = Physics.CheckSphere(transform.position, actualSightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
+
+        //ampliar rango del chaseplayer
+        //pasar los estados en un manager  o una entidad
+        //patrolControler vigilantController
 
         if (!botReference.isDead)
         {
@@ -134,6 +140,18 @@ public class enemyAi : MonoBehaviour
                 enemie.GetComponent<enemyAi>()?.SetForceFollowPlayer();
             }
         }
+    }
+    private void TakenDamage()
+    {
+        forceFollowPlayer = true;
+        Debug.Log("damage from enemyai");
+        ChasePlayer();
+        Invoke(nameof(SetForceFollowPlayer), 2f);
+    }
+
+    private void SetForceFollowPlayer()
+    {
+        forceFollowPlayer = false;
     }
     private void AttackPlayer()
     {
