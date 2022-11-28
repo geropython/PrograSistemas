@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class test : MonoBehaviour
+public interface ICommand
 {
-
-
+    void Execute();
+    void Undo();
 }

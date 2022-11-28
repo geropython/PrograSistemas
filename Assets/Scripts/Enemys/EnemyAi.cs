@@ -3,19 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyAi : MonoBehaviour
+public class enemyAi : MonoBehaviour
 {
     public NavMeshAgent agent;
 
     public Transform player;
 
-    public LayerMask whatIsGround, whatIsPlayer;
+   public LayerMask whatIsGround, whatIsPlayer, whatIsEnemy;
 
     Bot botReference;
 
     //patrol
     public Vector3 walkPoint;
-    bool walkPointSet;
+    [SerializeField] bool walkPointSet;
     public float walkPointRange;
 
     //attacking
@@ -24,12 +24,14 @@ public class EnemyAi : MonoBehaviour
     public GameObject projectile;
 
     //states
-    public float sightRange, attackRange, sightWhenChasingRange, actualSightRange;
-    public bool playerInSightRange, playerInAttackRange;
+    public float sightRange, attackRange, sightWhenChasingRange, actualSightRange, alarmRange;
+    public bool playerInSightRange, playerInAttackRange, enemyAlarmRange;
 
-    //animation
+
     Animator anim;
 
+
+    bool forceFollowPlayer;
 
     private void Awake()
     {
@@ -40,16 +42,25 @@ public class EnemyAi : MonoBehaviour
         actualSightRange = sightRange;
     }
 
+    private void Start()
+    {
+        botReference.OnTakenDamage += TakenDamage;
+    }
+
     private void Update()
     {
         //check sight/attack range
         playerInSightRange = Physics.CheckSphere(transform.position, actualSightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
 
+        //ampliar rango del chaseplayer
+        //pasar los estados en un manager  o una entidad
+        //patrolControler vigilantController
+
         if (!botReference.isDead)
         {
             if (!playerInSightRange && !playerInAttackRange) Patroling();
-            if (playerInSightRange && !playerInAttackRange) ChasePlayer();
+            if (playerInSightRange && !playerInAttackRange || forceFollowPlayer) ChasePlayer();
             if (playerInSightRange && playerInAttackRange) AttackPlayer();
         }
         else
@@ -60,9 +71,14 @@ public class EnemyAi : MonoBehaviour
         }
     }
 
+    public void FollowPlayer()
+    {
+
+    }
 
     private void Patroling()
     {
+        agent.stoppingDistance = 1f;
         actualSightRange = sightRange;
         //Animation
         anim.SetBool("Walk", true);  //CAMBIO
@@ -92,32 +108,57 @@ public class EnemyAi : MonoBehaviour
             walkPointSet = true;
     }
 
+    private void TakenDamage()
+    {
+        forceFollowPlayer = true;
+        Debug.Log("damage from enemyai");
+        ChasePlayer();
+        Invoke(nameof(SetForceFollowPlayer), 2f);
+    }
+
+    private void SetForceFollowPlayer()
+    {
+        forceFollowPlayer = false;
+    }
+
     private void ChasePlayer()
     {
+        agent.stoppingDistance = 2.5f;
         actualSightRange = sightWhenChasingRange;
 
-        anim.SetBool("Chase", true); //CAMBIOS
+        anim.SetBool("Chase", true);
         anim.SetBool("Walk", false);
         anim.SetBool("Aim", false);
 
         agent.SetDestination(player.position);
+
+        var enemies = Physics.OverlapSphere(transform.position, alarmRange, whatIsEnemy);
+        if (enemies.Length > 0)
+        {
+            foreach (var enemie in enemies)
+            {
+                enemie.GetComponent<enemyAi>()?.SetForceFollowPlayer();
+            }
+        }
     }
+
     private void AttackPlayer()
     {
-        anim.SetBool("Aim", true); //CAMBIOS
+        anim.SetBool("Aim", true);
         anim.SetBool("Chase", false);
         anim.SetBool("Walk", false);
 
         agent.SetDestination(transform.position);
 
-        transform.LookAt(player);
+        Vector3 lookPosition = new Vector3(player.transform.position.x, player.transform.position.y - 0.5f, player.transform.position.z);
+        transform.LookAt(lookPosition);
 
         if (!alreadyAttacked)
         {
             Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
 
-            rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
-            rb.AddForce(transform.up * 8f, ForceMode.Impulse);
+            rb.AddForce(transform.forward * 16f, ForceMode.Impulse);
+            rb.AddForce(transform.up * 4f, ForceMode.Impulse);
 
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
@@ -140,5 +181,7 @@ public class EnemyAi : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, attackRange);
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, sightRange);
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(walkPoint, 2f);
     }
 }
