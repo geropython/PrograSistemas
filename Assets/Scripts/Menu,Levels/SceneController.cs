@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
+    public GameObject panel;
     public void RestartScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -27,6 +28,14 @@ public class SceneController : MonoBehaviour
         //Level1
         Cursor.lockState = CursorLockMode.Locked;
         SceneManager.LoadScene(1);
+    } 
+    public void Controls()
+    {
+        panel.SetActive(true);
+    }
+    public void QuitControls()
+    {
+        panel.SetActive(false);
     }
 
     public void QuitGame()
