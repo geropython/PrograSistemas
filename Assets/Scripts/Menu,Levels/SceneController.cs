@@ -18,12 +18,14 @@ public class SceneController : MonoBehaviour
     public void Continue()
     {
         //Escape
+        Cursor.lockState = CursorLockMode.Locked;
         SceneManager.LoadScene(2);
     }
 
     public void StartGame()
     {
         //Level1
+        Cursor.lockState = CursorLockMode.Locked;
         SceneManager.LoadScene(1);
     }
 
