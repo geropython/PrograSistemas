@@ -5,18 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void RestartScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -29,11 +17,13 @@ public class SceneController : MonoBehaviour
 
     public void Continue()
     {
+        //Escape
         SceneManager.LoadScene(2);
     }
 
     public void StartGame()
     {
+        //Level1
         SceneManager.LoadScene(1);
     }
 
