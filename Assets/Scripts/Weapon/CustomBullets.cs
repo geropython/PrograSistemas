@@ -47,6 +47,7 @@ public class CustomBullets : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         //count collisions
+        if (collision.collider.CompareTag("Enemy")) return; 
         collisions++;
 
         //boom if malo + explodeOnTouch si

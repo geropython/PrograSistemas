@@ -77,6 +77,8 @@ public class GunScript : MonoBehaviour, IWeapon
         soundManager.PlaySound("fire");
         readyToShoot = false;
 
+        Debug.Log("SHOOT!!");
+
         //shoot spread
         float x = Random.Range(-spread, spread);
         float y = Random.Range(-spread, spread);
