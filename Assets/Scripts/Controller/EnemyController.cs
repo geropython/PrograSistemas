@@ -55,6 +55,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private float timeBetweenAttacks;
     bool alreadyAttacked;
 
+    
     //states
     public bool playerInSightRange, playerInAttackRange, enemyAlarmRange, playerAlarmRange;
 
@@ -75,7 +76,7 @@ public class EnemyController : MonoBehaviour
     private void Start()
     {
         botReference.OnTakenDamage += TakenDamage;
-        agent.speed = 3;
+        agent.speed = 10;
     }
 
     private void Update()
@@ -162,6 +163,7 @@ public class EnemyController : MonoBehaviour
 
     private void SetForceFollowPlayer(bool state = false, float time = 0)
     {
+        Debug.Log("Fuerza chase");
         forceFollowPlayer = state;
         _timerChaseInSeconds = time;
     }
@@ -194,15 +196,19 @@ public class EnemyController : MonoBehaviour
     {
         if (!playerInSightRange) return;
 
+        Debug.Log("Entro alarm");
+
         Vector3 lookPosition = new Vector3(_player.transform.position.x, _player.transform.position.y - 0.5f, _player.transform.position.z);
         transform.LookAt(lookPosition);
 
         var enemies = Physics.OverlapSphere(transform.position, _alarmRange, _whatIsEnemy);
+        Debug.Log(enemies.Length);
+
         if (enemies.Length > 0)
         {
             foreach (var enemie in enemies)
             {
-                enemie.GetComponent<EnemyController>()?.SetForceFollowPlayer(true, 30f);
+                enemie.GetComponent<EnemyController>()?.SetForceFollowPlayer(true, 3f);
             }
         }
 
