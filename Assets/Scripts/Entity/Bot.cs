@@ -1,5 +1,7 @@
 using System;
 using UnityEngine;
+using System;
+
 public class Bot : Actor
 {
     public Action OnTakenDamage;
@@ -15,6 +17,7 @@ public class Bot : Actor
 
     public override void TakeDamage(int damage)
     {
+        Debug.Log("Llego al take damage");
         base.TakeDamage(damage);
         if (anim != null) anim.SetTrigger("TakeDamage");
         OnTakenDamage.Invoke();
