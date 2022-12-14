@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 7747846835222394235}
   - component: {fileID: -8648145946029149590}
   - component: {fileID: -1121940042251400464}
-  m_Layer: 9
+  m_Layer: 6
   m_Name: TorretEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -228,7 +228,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7747846835845032920}
   - component: {fileID: 7747846835845032921}
-  m_Layer: 9
+  m_Layer: 6
   m_Name: GunHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -278,7 +278,7 @@ GameObject:
   - component: {fileID: 7747846836117363648}
   - component: {fileID: 7747846836117363655}
   - component: {fileID: 7747846836117363654}
-  m_Layer: 9
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -401,9 +401,65 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6903650204625814817, guid: 97f251a7d04f5fe4797332ca70a2d1ef, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6903650204625814819, guid: 97f251a7d04f5fe4797332ca70a2d1ef, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6903650204625814821, guid: 97f251a7d04f5fe4797332ca70a2d1ef, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6903650204625814823, guid: 97f251a7d04f5fe4797332ca70a2d1ef, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6903650204625814825, guid: 97f251a7d04f5fe4797332ca70a2d1ef, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6903650204625814827, guid: 97f251a7d04f5fe4797332ca70a2d1ef, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6903650204625814829, guid: 97f251a7d04f5fe4797332ca70a2d1ef, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6903650204625814831, guid: 97f251a7d04f5fe4797332ca70a2d1ef, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6903650204625814837, guid: 97f251a7d04f5fe4797332ca70a2d1ef, type: 3}
       propertyPath: m_Name
       value: Robo3Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 6903650204625814837, guid: 97f251a7d04f5fe4797332ca70a2d1ef, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6903650204625814839, guid: 97f251a7d04f5fe4797332ca70a2d1ef, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6903650204625814841, guid: 97f251a7d04f5fe4797332ca70a2d1ef, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6903650204625814843, guid: 97f251a7d04f5fe4797332ca70a2d1ef, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6903650204625814845, guid: 97f251a7d04f5fe4797332ca70a2d1ef, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6903650204625814847, guid: 97f251a7d04f5fe4797332ca70a2d1ef, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6903650204635313903, guid: 97f251a7d04f5fe4797332ca70a2d1ef, type: 3}
       propertyPath: m_Enabled
@@ -427,15 +483,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 565569876, guid: ee329c3cd08e58645834d20702d7f6c6, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1324608018887474, guid: ee329c3cd08e58645834d20702d7f6c6, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1452442627303592, guid: ee329c3cd08e58645834d20702d7f6c6, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1487774384131766, guid: ee329c3cd08e58645834d20702d7f6c6, type: 3}
       propertyPath: m_Name
@@ -443,11 +499,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1487774384131766, guid: ee329c3cd08e58645834d20702d7f6c6, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1927369336514790, guid: ee329c3cd08e58645834d20702d7f6c6, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4519716788627816, guid: ee329c3cd08e58645834d20702d7f6c6, type: 3}
       propertyPath: m_RootOrder
