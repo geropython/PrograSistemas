@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: -5817848383993502962}
   - component: {fileID: -6730786412039313623}
   m_Layer: 6
-  m_Name: StandarEnemy
+  m_Name: AlarmEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -273,14 +273,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54ffdd59ec9c2304083e51816a8934b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _canPatrol: 1
-  _canChase: 1
+  agent: {fileID: 4859093805432904397}
+  _canPatrol: 0
+  _canChase: 0
   _canAttack: 1
   _canAlarm: 1
   _sightRange: 20
   _sightWhenChasingRange: 20
   _attackRange: 10
   _alarmRange: 30
+  _actualSightRange: 0
   _whatIsGround:
     serializedVersion: 2
     m_Bits: 8

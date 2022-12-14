@@ -98,10 +98,10 @@ GameObject:
   - component: {fileID: 4859093805432904396}
   - component: {fileID: 4859093805432904397}
   - component: {fileID: 4859093805432904406}
+  - component: {fileID: 4859093805432904407}
   - component: {fileID: -5817848383993502962}
-  - component: {fileID: -7070056112339662208}
   m_Layer: 9
-  m_Name: enemy 1
+  m_Name: NormalEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -241,6 +241,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _actorStats: {fileID: 11400000, guid: b17567ef6a4f5b74a81d7c88bfb57084, type: 2}
   isDead: 0
+--- !u!114 &4859093805432904407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4859093805432904398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa2a94e2f7332df428d0e69016c47b7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 4859093805432904397}
+  player: {fileID: 3066711885731141087, guid: 761ef0e917b63a44aa7364be23e578b9, type: 3}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 8
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 384
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointSet: 0
+  walkPointRange: 5
+  timeBetweenAttacks: 3.5
+  projectile: {fileID: 6856635678542448249, guid: 31c44208850784a44909a4167dc0c149, type: 3}
+  sightRange: 20
+  attackRange: 16
+  sightWhenChasingRange: 10
+  actualSightRange: 0
+  playerInSightRange: 0
+  playerInAttackRange: 0
 --- !u!95 &-5817848383993502962
 Animator:
   serializedVersion: 4
@@ -261,46 +292,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &-7070056112339662208
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4859093805432904398}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54ffdd59ec9c2304083e51816a8934b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  agent: {fileID: 4859093805432904397}
-  _canPatrol: 1
-  _canChase: 1
-  _canAttack: 1
-  _canAlarm: 1
-  _sightRange: 20
-  _sightWhenChasingRange: 20
-  _attackRange: 10
-  _alarmRange: 30
-  _actualSightRange: 0
-  _whatIsGround:
-    serializedVersion: 2
-    m_Bits: 8
-  _whatIsPlayer:
-    serializedVersion: 2
-    m_Bits: 128
-  _whatIsEnemy:
-    serializedVersion: 2
-    m_Bits: 64
-  _player: {fileID: 0}
-  _projectile: {fileID: 6856635678542448249, guid: 31c44208850784a44909a4167dc0c149, type: 3}
-  _timerChaseInSeconds: 0
-  walkPointRange: 5
-  timeBetweenAttacks: 0
-  playerInSightRange: 0
-  playerInAttackRange: 0
-  enemyAlarmRange: 0
-  playerAlarmRange: 0
 --- !u!1 &4859093805784941686
 GameObject:
   m_ObjectHideFlags: 0
