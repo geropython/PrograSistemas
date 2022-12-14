@@ -110,6 +110,7 @@ public class EnemyController : MonoBehaviour
     {
         if (playerInSightRange && playerInAttackRange) return;
 
+        Debug.Log("patroll");
         agent.stoppingDistance = 1f;
         _actualSightRange = _sightRange;
         //Animation

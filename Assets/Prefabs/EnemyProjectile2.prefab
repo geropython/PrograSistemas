@@ -134,7 +134,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 320
   bounciness: 0
-  useGravity: 0
+  useGravity: 1
   explosionDamage: 30
   explosionRange: 10
   explosionForce: 0

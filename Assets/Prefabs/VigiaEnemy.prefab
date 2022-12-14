@@ -99,9 +99,9 @@ GameObject:
   - component: {fileID: 4859093805432904397}
   - component: {fileID: 4859093805432904406}
   - component: {fileID: -5817848383993502962}
-  - component: {fileID: -6730786412039313623}
+  - component: {fileID: 4596612204171596581}
   m_Layer: 7
-  m_Name: StandarEnemy
+  m_Name: VigiaEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -115,7 +115,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4859093805432904398}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 15.6, y: 3.52, z: -44.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -254,14 +254,14 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 0d3031a09092bc748960a4a83b08a337, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &-6730786412039313623
+--- !u!114 &4596612204171596581
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -273,14 +273,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54ffdd59ec9c2304083e51816a8934b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _canPatrol: 1
-  _canChase: 1
-  _canAttack: 1
+  _canPatrol: 0
+  _canChase: 0
+  _canAttack: 0
   _canAlarm: 1
-  _sightRange: 20
-  _sightWhenChasingRange: 20
+  _sightRange: 50
+  _sightWhenChasingRange: 50
   _attackRange: 10
-  _alarmRange: 30
+  _alarmRange: 0
   _whatIsGround:
     serializedVersion: 2
     m_Bits: 8
