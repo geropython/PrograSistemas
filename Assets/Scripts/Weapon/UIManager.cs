@@ -8,8 +8,8 @@ public class UIManager : MonoBehaviour
     public Actor player;
     public AutomaticGunScriptLPFP weapon;
     public HandgunScriptLPFP pistol;
-    public BossScript boss;
-    public BossScript boss2;
+    [SerializeField] public BossScript boss ;
+    [SerializeField] public BossScript boss2;
     [SerializeField] GameObject victoryCanvas;
     [SerializeField] GameObject defeatCanvas;
     [SerializeField] Image lifebar;
@@ -32,6 +32,7 @@ public class UIManager : MonoBehaviour
             ammoText.text = $"{pistol.CurrentAmmo}/{pistol.ammo}";
 
         if (boss2 == null) {
+            if (boss == null) return;
             if (boss.finishedDeathAnim)
             {
                 victoryCanvas.SetActive(true);
