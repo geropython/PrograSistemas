@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Levels/boss.unity
     guid: e67c1845cda20d94f87081d3ffb05109
   - enabled: 1
-    path: Assets/Scenes/Levels/Levels/Escape.unity
+    path: Assets/Scenes/Levels/Levels/Escape old.unity
     guid: d1a533948b590964e9976a0feb7db116
   - enabled: 1
     path: Assets/Scenes/MainMenu/Win.unity
