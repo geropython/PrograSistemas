@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 1677156}
   - component: {fileID: 1677155}
   - component: {fileID: 1677154}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -268,7 +268,7 @@ GameObject:
   - component: {fileID: 40412122}
   - component: {fileID: 40412121}
   - component: {fileID: 40412120}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -365,7 +365,7 @@ GameObject:
   - component: {fileID: 41048777}
   - component: {fileID: 41048776}
   - component: {fileID: 41048775}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada1 (30)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -870,7 +870,7 @@ GameObject:
   - component: {fileID: 105625753}
   - component: {fileID: 105625752}
   - component: {fileID: 105625751}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada1 (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -967,7 +967,7 @@ GameObject:
   - component: {fileID: 128452507}
   - component: {fileID: 128452506}
   - component: {fileID: 128452505}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada1 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1064,7 +1064,7 @@ GameObject:
   - component: {fileID: 129752823}
   - component: {fileID: 129752822}
   - component: {fileID: 129752821}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1161,7 +1161,7 @@ GameObject:
   - component: {fileID: 133123027}
   - component: {fileID: 133123026}
   - component: {fileID: 133123025}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada1 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1263,7 +1263,7 @@ GameObject:
   - component: {fileID: 138792140}
   - component: {fileID: 138792139}
   - component: {fileID: 138792138}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada1 (42)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1360,7 +1360,7 @@ GameObject:
   - component: {fileID: 149177125}
   - component: {fileID: 149177124}
   - component: {fileID: 149177123}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1457,7 +1457,7 @@ GameObject:
   - component: {fileID: 150532418}
   - component: {fileID: 150532417}
   - component: {fileID: 150532416}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada1 (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1554,7 +1554,7 @@ GameObject:
   - component: {fileID: 153224315}
   - component: {fileID: 153224314}
   - component: {fileID: 153224313}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada1 (41)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1790,7 +1790,7 @@ GameObject:
   - component: {fileID: 168059293}
   - component: {fileID: 168059292}
   - component: {fileID: 168059291}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada1 (35)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2153,7 +2153,7 @@ GameObject:
   - component: {fileID: 209997901}
   - component: {fileID: 209997900}
   - component: {fileID: 209997899}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada1 (48)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2250,7 +2250,7 @@ GameObject:
   - component: {fileID: 219075487}
   - component: {fileID: 219075486}
   - component: {fileID: 219075485}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada1 (51)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2483,7 +2483,7 @@ GameObject:
   - component: {fileID: 266330608}
   - component: {fileID: 266330607}
   - component: {fileID: 266330606}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada1 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2580,7 +2580,7 @@ GameObject:
   - component: {fileID: 309074874}
   - component: {fileID: 309074873}
   - component: {fileID: 309074872}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada1 (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2682,7 +2682,7 @@ GameObject:
   - component: {fileID: 316741576}
   - component: {fileID: 316741575}
   - component: {fileID: 316741574}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada1 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3395,7 +3395,7 @@ GameObject:
   - component: {fileID: 385838337}
   - component: {fileID: 385838336}
   - component: {fileID: 385838335}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada1 (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3579,7 +3579,7 @@ GameObject:
   - component: {fileID: 406521947}
   - component: {fileID: 406521946}
   - component: {fileID: 406521945}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada1 (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3805,7 +3805,7 @@ GameObject:
   - component: {fileID: 416307684}
   - component: {fileID: 416307683}
   - component: {fileID: 416307682}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada1 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4047,7 +4047,7 @@ GameObject:
   - component: {fileID: 460120235}
   - component: {fileID: 460120234}
   - component: {fileID: 460120233}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4638,6 +4638,67 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &501630709
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 501630711}
+  - component: {fileID: 501630710}
+  m_Layer: 0
+  m_Name: NavMesh
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &501630710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501630709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 8
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 23800000, guid: a93e809e906eb954bb7d9a97318efaf4, type: 2}
+--- !u!4 &501630711
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501630709}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -275.4986, y: 205.8004, z: 313.60687}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &505274947
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4707,7 +4768,7 @@ GameObject:
   - component: {fileID: 514028499}
   - component: {fileID: 514028498}
   - component: {fileID: 514028497}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4804,7 +4865,7 @@ GameObject:
   - component: {fileID: 525422677}
   - component: {fileID: 525422676}
   - component: {fileID: 525422675}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada1 (53)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5097,7 +5158,7 @@ GameObject:
   - component: {fileID: 557741460}
   - component: {fileID: 557741459}
   - component: {fileID: 557741458}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5395,7 +5456,7 @@ GameObject:
   - component: {fileID: 617780369}
   - component: {fileID: 617780368}
   - component: {fileID: 617780367}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada1 (33)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5829,7 +5890,7 @@ GameObject:
   - component: {fileID: 647152731}
   - component: {fileID: 647152730}
   - component: {fileID: 647152729}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada1 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6636,7 +6697,7 @@ GameObject:
   - component: {fileID: 734228927}
   - component: {fileID: 734228926}
   - component: {fileID: 734228925}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8912,7 +8973,7 @@ GameObject:
   - component: {fileID: 757714787}
   - component: {fileID: 757714786}
   - component: {fileID: 757714785}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada1 (36)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9128,7 +9189,7 @@ GameObject:
   - component: {fileID: 777859124}
   - component: {fileID: 777859123}
   - component: {fileID: 777859122}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9691,7 +9752,7 @@ GameObject:
   - component: {fileID: 833390265}
   - component: {fileID: 833390264}
   - component: {fileID: 833390263}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada1 (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9845,7 +9906,7 @@ GameObject:
   - component: {fileID: 850706686}
   - component: {fileID: 850706685}
   - component: {fileID: 850706684}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada1 (29)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10075,7 +10136,7 @@ GameObject:
   - component: {fileID: 876309383}
   - component: {fileID: 876309382}
   - component: {fileID: 876309381}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada1 (39)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10530,7 +10591,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 919738204}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Tierra
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10896,7 +10957,7 @@ GameObject:
   - component: {fileID: 925318190}
   - component: {fileID: 925318189}
   - component: {fileID: 925318188}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada1 (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10993,7 +11054,7 @@ GameObject:
   - component: {fileID: 930840332}
   - component: {fileID: 930840331}
   - component: {fileID: 930840330}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada1 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11224,7 +11285,7 @@ GameObject:
   - component: {fileID: 936558085}
   - component: {fileID: 936558084}
   - component: {fileID: 936558083}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada1 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11321,7 +11382,7 @@ GameObject:
   - component: {fileID: 937004431}
   - component: {fileID: 937004430}
   - component: {fileID: 937004429}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11423,7 +11484,7 @@ GameObject:
   - component: {fileID: 978373153}
   - component: {fileID: 978373152}
   - component: {fileID: 978373151}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada1 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13069,7 +13130,7 @@ GameObject:
   - component: {fileID: 1179121264}
   - component: {fileID: 1179121263}
   - component: {fileID: 1179121262}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13357,7 +13418,7 @@ GameObject:
   - component: {fileID: 1198712710}
   - component: {fileID: 1198712709}
   - component: {fileID: 1198712708}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada1 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13516,7 +13577,7 @@ GameObject:
   - component: {fileID: 1206056067}
   - component: {fileID: 1206056066}
   - component: {fileID: 1206056065}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada1 (32)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13613,7 +13674,7 @@ GameObject:
   - component: {fileID: 1219407183}
   - component: {fileID: 1219407182}
   - component: {fileID: 1219407181}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada1 (50)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14105,7 +14166,7 @@ GameObject:
   - component: {fileID: 1242883854}
   - component: {fileID: 1242883853}
   - component: {fileID: 1242883852}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada1 (46)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14555,7 +14616,7 @@ GameObject:
   - component: {fileID: 1263285665}
   - component: {fileID: 1263285664}
   - component: {fileID: 1263285663}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14720,7 +14781,7 @@ GameObject:
   - component: {fileID: 1290065071}
   - component: {fileID: 1290065070}
   - component: {fileID: 1290065069}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14884,7 +14945,7 @@ GameObject:
   - component: {fileID: 1350017244}
   - component: {fileID: 1350017243}
   - component: {fileID: 1350017242}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada1 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15265,7 +15326,7 @@ GameObject:
   - component: {fileID: 1377468300}
   - component: {fileID: 1377468299}
   - component: {fileID: 1377468298}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada1 (45)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17023,7 +17084,7 @@ GameObject:
   - component: {fileID: 1523493191}
   - component: {fileID: 1523493190}
   - component: {fileID: 1523493189}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada1 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17218,7 +17279,7 @@ GameObject:
   - component: {fileID: 1557758299}
   - component: {fileID: 1557758298}
   - component: {fileID: 1557758297}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada1 (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17354,7 +17415,7 @@ GameObject:
   - component: {fileID: 1563711422}
   - component: {fileID: 1563711421}
   - component: {fileID: 1563711420}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada1 (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17451,7 +17512,7 @@ GameObject:
   - component: {fileID: 1575530459}
   - component: {fileID: 1575530458}
   - component: {fileID: 1575530457}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada1 (49)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17548,7 +17609,7 @@ GameObject:
   - component: {fileID: 1576821190}
   - component: {fileID: 1576821189}
   - component: {fileID: 1576821188}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18367,7 +18428,7 @@ GameObject:
   - component: {fileID: 1655016419}
   - component: {fileID: 1655016418}
   - component: {fileID: 1655016417}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada1 (28)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18593,7 +18654,7 @@ GameObject:
   - component: {fileID: 1667446730}
   - component: {fileID: 1667446729}
   - component: {fileID: 1667446728}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada1 (56)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18938,7 +18999,7 @@ GameObject:
   - component: {fileID: 1694780377}
   - component: {fileID: 1694780376}
   - component: {fileID: 1694780375}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada1 (43)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19391,7 +19452,7 @@ GameObject:
   - component: {fileID: 1710655870}
   - component: {fileID: 1710655869}
   - component: {fileID: 1710655868}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada1 (52)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19488,7 +19549,7 @@ GameObject:
   - component: {fileID: 1719337005}
   - component: {fileID: 1719337004}
   - component: {fileID: 1719337003}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19585,7 +19646,7 @@ GameObject:
   - component: {fileID: 1722011766}
   - component: {fileID: 1722011765}
   - component: {fileID: 1722011764}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada1 (40)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19816,7 +19877,7 @@ GameObject:
   - component: {fileID: 1754684628}
   - component: {fileID: 1754684627}
   - component: {fileID: 1754684626}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada1 (37)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20156,7 +20217,7 @@ GameObject:
   - component: {fileID: 1781680712}
   - component: {fileID: 1781680711}
   - component: {fileID: 1781680710}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20253,7 +20314,7 @@ GameObject:
   - component: {fileID: 1786257161}
   - component: {fileID: 1786257160}
   - component: {fileID: 1786257159}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada1 (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20479,7 +20540,7 @@ GameObject:
   - component: {fileID: 1791913525}
   - component: {fileID: 1791913524}
   - component: {fileID: 1791913523}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada1 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20576,7 +20637,7 @@ GameObject:
   - component: {fileID: 1818267165}
   - component: {fileID: 1818267164}
   - component: {fileID: 1818267163}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada1 (55)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20678,7 +20739,7 @@ GameObject:
   - component: {fileID: 1831761845}
   - component: {fileID: 1831761844}
   - component: {fileID: 1831761843}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada1 (38)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20978,7 +21039,7 @@ GameObject:
   - component: {fileID: 1858297271}
   - component: {fileID: 1858297270}
   - component: {fileID: 1858297269}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada1 (31)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21514,7 +21575,7 @@ GameObject:
   - component: {fileID: 1945555583}
   - component: {fileID: 1945555582}
   - component: {fileID: 1945555581}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada1 (54)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21958,7 +22019,7 @@ GameObject:
   - component: {fileID: 1998519090}
   - component: {fileID: 1998519089}
   - component: {fileID: 1998519088}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada1 (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22112,7 +22173,7 @@ GameObject:
   - component: {fileID: 2012072013}
   - component: {fileID: 2012072012}
   - component: {fileID: 2012072011}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada1 (47)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22209,7 +22270,7 @@ GameObject:
   - component: {fileID: 2014923509}
   - component: {fileID: 2014923508}
   - component: {fileID: 2014923507}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada1 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22363,7 +22424,7 @@ GameObject:
   - component: {fileID: 2023923709}
   - component: {fileID: 2023923708}
   - component: {fileID: 2023923707}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada1 (34)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22936,7 +22997,7 @@ GameObject:
   - component: {fileID: 2066931181}
   - component: {fileID: 2066931180}
   - component: {fileID: 2066931179}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23104,7 +23165,7 @@ GameObject:
   - component: {fileID: 2083679134}
   - component: {fileID: 2083679133}
   - component: {fileID: 2083679132}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TierraQuemada1 (44)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -40,11 +40,12 @@ public class EnemyController : MonoBehaviour
     [Header("Set Proyectile")]
     [Space(5)]
     [SerializeField] private GameObject _projectile;
+    [SerializeField] private float timeBetweenAttacks;
     [Space(10)]
 
     [SerializeField] private float _timerChaseInSeconds = 0f;
 
-
+    [Header("Debbuging")]
     //patrol
     private Vector3 walkPoint;
     bool walkPointSet;
@@ -52,7 +53,7 @@ public class EnemyController : MonoBehaviour
     bool forceFollowPlayer = false;
 
     //attacking
-    [SerializeField] private float timeBetweenAttacks;
+
     bool alreadyAttacked;
 
     
