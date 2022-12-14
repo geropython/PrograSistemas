@@ -5,100 +5,50 @@ using UnityEngine.AI;
 
 public class EnemyAi : MonoBehaviour
 {
-    //Enemy Actions
-    [Header("Enemy Actions")]
-    [Space(5)]
-    [SerializeField] private bool _canPatrol = false;
-    [SerializeField] private bool _canChase = false;
-    [SerializeField] private bool _canAttack = false;
-    [SerializeField] private bool _canAlarm = false;
-    [Space(10)]
+    public NavMeshAgent agent;
 
-    //Ranges
-    [Header("Enemy Range")]
-    [Space(5)]
-    [SerializeField] private float _sightRange;
-    [SerializeField] private float _sightWhenChasingRange;
-    [SerializeField] private float _attackRange;
-    [SerializeField] private float _alarmRange;
-    private float _actualSightRange;
-    [Space(10)]
+    public Transform player;
 
-    [Header("Enemy Layers")]
-    [Space(5)]
-    [SerializeField] private LayerMask _whatIsGround;
-    [SerializeField] private LayerMask _whatIsPlayer;
-    [SerializeField] private LayerMask _whatIsEnemy;
-    [Space(10)]
+    public LayerMask whatIsGround, whatIsPlayer;
 
-    [Header("Player Transform")]
-    [Space(5)]
-    [SerializeField] private Transform _player;
-    [Space(10)]
-
-    [Header("Set Proyectile")]
-    [Space(5)]
-    [SerializeField] private GameObject _projectile;
-    [Space(10)]
-
-    [SerializeField] private float _timerChaseInSeconds = 0f;
-
+    Bot botReference;
 
     //patrol
     public Vector3 walkPoint;
-    bool walkPointSet;
+    [SerializeField] bool walkPointSet;
     public float walkPointRange;
-    bool forceFollowPlayer = false;
-
-
-
 
     //attacking
     public float timeBetweenAttacks;
     bool alreadyAttacked;
+    public GameObject projectile;
 
     //states
-    public bool playerInSightRange, playerInAttackRange, enemyAlarmRange, playerAlarmRange;
+    public float sightRange, attackRange, sightWhenChasingRange, actualSightRange;
+    public bool playerInSightRange, playerInAttackRange;
 
-    //animation
     Animator anim;
-
-    private NavMeshAgent agent;
-    private Bot botReference;
 
     private void Awake()
     {
-        _player = GameObject.Find("Player").transform;
+        player = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
         botReference = GetComponent<Bot>();
-        _actualSightRange = _sightRange;
-    }
-    private void Start()
-    {
-        botReference.OnTakenDamage += TakenDamage;
-        agent.speed = 3;
+        actualSightRange = sightRange;
     }
 
     private void Update()
     {
         //check sight/attack range
-        playerInSightRange = Physics.CheckSphere(transform.position, _actualSightRange, _whatIsPlayer);
-        playerInAttackRange = Physics.CheckSphere(transform.position, _attackRange, _whatIsPlayer);
-        enemyAlarmRange = Physics.CheckSphere(transform.position, _alarmRange, _whatIsEnemy);
-
-        if (_timerChaseInSeconds > 0)
-        {
-            _timerChaseInSeconds -= Time.deltaTime;
-            if (_timerChaseInSeconds <= 0) forceFollowPlayer = false;
-        }
+        playerInSightRange = Physics.CheckSphere(transform.position, actualSightRange, whatIsPlayer);
+        playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
 
         if (!botReference.isDead)
         {
-            if (_canPatrol) Patroling();
-            if (playerInSightRange || forceFollowPlayer) ChasePlayer();
-            if (_canAttack) AttackPlayer();
-            if (_canAlarm) Alarm();
+            if (!playerInSightRange && !playerInAttackRange) Patroling();
+            if (playerInSightRange && !playerInAttackRange) ChasePlayer();
+            if (playerInSightRange && playerInAttackRange) AttackPlayer();
         }
         else
         {
@@ -108,13 +58,10 @@ public class EnemyAi : MonoBehaviour
         }
     }
 
-
     private void Patroling()
     {
-        if (playerInSightRange && playerInAttackRange) return;
-        
         agent.stoppingDistance = 1f;
-        _actualSightRange = _sightRange;
+        actualSightRange = sightRange;
         //Animation
         anim.SetBool("Walk", true);  //CAMBIO
         anim.SetBool("Chase", false);
@@ -138,59 +85,36 @@ public class EnemyAi : MonoBehaviour
         float randomX = Random.Range(-walkPointRange, walkPointRange);
 
         walkPoint = new Vector3(transform.position.x + randomX, transform.position.y, transform.position.z + randomZ);
-        
-        if (Physics.Raycast(walkPoint, -transform.up, 2f, _whatIsGround))
+
+        if (Physics.Raycast(walkPoint, -transform.up, 2f, whatIsGround))
             walkPointSet = true;
     }
 
     private void ChasePlayer()
     {
-        //Debug.Log($"Antes del if al chase speed: {agent.speed}");
-        //Debug.Log($"playerInSightRange: {playerInSightRange}, playerInAttackRange: {playerInAttackRange}, forceFollowPlayer: {forceFollowPlayer}");
-        if (!_canChase) return;
-
-        //Debug.Log("Entrando al chase");
-        
         agent.stoppingDistance = 2.5f;
-        _actualSightRange = _sightWhenChasingRange;
+        actualSightRange = sightWhenChasingRange;
 
-        anim.SetBool("Chase", true); //CAMBIOS
+        anim.SetBool("Chase", true);
         anim.SetBool("Walk", false);
         anim.SetBool("Aim", false);
 
-        agent.SetDestination(_player.position);
-
-    }
-    private void TakenDamage()
-    {
-        forceFollowPlayer = true;
-        Debug.Log("damage from enemyai");
-        ChasePlayer();
-        Invoke(nameof(SetForceFollowPlayer), 2f);
-    }
-
-    private void SetForceFollowPlayer(bool state = false, float time = 0)
-    {
-        forceFollowPlayer = state;
-        _timerChaseInSeconds = time;
+        agent.SetDestination(player.position);
     }
     private void AttackPlayer()
     {
-        if (!playerInAttackRange) return;
-        //Debug.Log("Ataca");
-        
-        anim.SetBool("Aim", true); //CAMBIOS
+        anim.SetBool("Aim", true);
         anim.SetBool("Chase", false);
         anim.SetBool("Walk", false);
 
         agent.SetDestination(transform.position);
 
-        Vector3 lookPosition = new Vector3(_player.transform.position.x, _player.transform.position.y - 0.5f, _player.transform.position.z);
+        Vector3 lookPosition = new Vector3(player.transform.position.x, player.transform.position.y - 0.5f, player.transform.position.z);
         transform.LookAt(lookPosition);
 
         if (!alreadyAttacked)
         {
-            Rigidbody rb = Instantiate(_projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
+            Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
 
             rb.AddForce(transform.forward * 16f, ForceMode.Impulse);
             rb.AddForce(transform.up * 4f, ForceMode.Impulse);
@@ -199,23 +123,7 @@ public class EnemyAi : MonoBehaviour
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
         }
     }
-    private void Alarm()
-    {
-        if (!playerInSightRange) return;
 
-        Vector3 lookPosition = new Vector3(_player.transform.position.x, _player.transform.position.y - 0.5f, _player.transform.position.z);
-        transform.LookAt(lookPosition);     
-
-        var enemies = Physics.OverlapSphere(transform.position, _alarmRange, _whatIsEnemy);
-        if (enemies.Length > 0)
-        {
-            foreach (var enemie in enemies)
-            {
-                enemie.GetComponent<EnemyAi>()?.SetForceFollowPlayer(true, 3f);
-            }
-        }
-
-    }
     private void ResetAttack()
     {
         alreadyAttacked = false;
@@ -229,10 +137,10 @@ public class EnemyAi : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, _attackRange);
+        Gizmos.DrawWireSphere(transform.position, attackRange);
         Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, _sightRange);
-        Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(transform.position, _alarmRange);
+        Gizmos.DrawWireSphere(transform.position, sightRange);
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(walkPoint, 2f);
     }
 }
