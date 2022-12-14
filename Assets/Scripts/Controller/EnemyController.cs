@@ -5,6 +5,12 @@ using UnityEngine.AI;
 
 public class EnemyController : MonoBehaviour
 {
+    [Header("Nav Mesh")]
+    [Space(5)]
+    [SerializeField] private NavMeshAgent agent;
+
+    [Space(10)]
+
     //Enemy Actions
     [Header("Enemy Actions")]
     [Space(5)]
@@ -17,11 +23,11 @@ public class EnemyController : MonoBehaviour
     //Ranges
     [Header("Enemy Range")]
     [Space(5)]
-    [SerializeField] private float _sightRange;
+    [SerializeField] public float _sightRange;
     [SerializeField] private float _sightWhenChasingRange;
     [SerializeField] private float _attackRange;
     [SerializeField] private float _alarmRange;
-    private float _actualSightRange;
+    public float _actualSightRange;
     [Space(10)]
 
     //Layers
@@ -48,7 +54,7 @@ public class EnemyController : MonoBehaviour
     //patrol
     private Vector3 walkPoint;
     bool walkPointSet;
-    public float walkPointRange;
+    public float walkPointRange = 5f;
     bool forceFollowPlayer = false;
 
     //attacking
@@ -61,8 +67,6 @@ public class EnemyController : MonoBehaviour
 
     //animation
     Animator anim;
-
-    private NavMeshAgent agent;
     private Bot botReference;
 
     private void Awake()
@@ -124,19 +128,22 @@ public class EnemyController : MonoBehaviour
         Vector3 distanceToWalkPoint = transform.position - walkPoint;
 
         //walkpoint reached
-        if (distanceToWalkPoint.magnitude < 1.4f)
+        if (distanceToWalkPoint.magnitude < 0f)
             walkPointSet = false;
     }
 
     private void SearchWalkPoint()
     {
+        Debug.Log("search"+walkPointSet);
+
         float randomZ = Random.Range(-walkPointRange, walkPointRange);
         float randomX = Random.Range(-walkPointRange, walkPointRange);
 
         walkPoint = new Vector3(transform.position.x + randomX, transform.position.y, transform.position.z + randomZ);
-
+        Debug.Log(walkPoint);
         if (Physics.Raycast(walkPoint, -transform.up, 2f, _whatIsGround))
             walkPointSet = true;
+        Debug.Log(walkPointSet);
     }
 
     private void ChasePlayer()
