@@ -10,7 +10,7 @@ public class BossFightTrigger1 : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer == 8)
+        if (other.gameObject.layer == 7)
         {
             wall.SetActive(true);
             bossLifebar.SetActive(true);

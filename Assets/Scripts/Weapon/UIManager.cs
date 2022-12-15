@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -31,12 +32,14 @@ public class UIManager : MonoBehaviour
         else if (pistol != null && pistol.gameObject.activeInHierarchy )
             ammoText.text = $"{pistol.CurrentAmmo}/{pistol.ammo}";
 
+        if (SceneManager.GetActiveScene().name == "boss")
         if (boss2 == null) {
+            if (boss == null) return;
             if (boss.finishedDeathAnim)
             {
-                victoryCanvas.SetActive(true);
-                Time.timeScale = 0f;
-                Cursor.lockState = CursorLockMode.None;
+                SceneManager.LoadScene("Escape");
+                //Time.timeScale = 0f;
+                //Cursor.lockState = CursorLockMode.None;
             }
            
         }else if (boss2 != null)

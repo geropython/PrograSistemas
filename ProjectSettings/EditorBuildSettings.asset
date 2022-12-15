@@ -9,11 +9,14 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu/MainMenu.unity
     guid: 46b0cfa73b1c8db44a988876f53e0b1f
   - enabled: 1
+    path: Assets/Scenes/Levels/Levels/Combat.unity
+    guid: 630ca15a0763a1543b8bfa940376c6c8
+  - enabled: 1
     path: Assets/Scenes/Levels/Levels/boss.unity
     guid: e67c1845cda20d94f87081d3ffb05109
   - enabled: 1
-    path: Assets/Scenes/Levels/Levels/Escape old.unity
-    guid: d1a533948b590964e9976a0feb7db116
+    path: Assets/Scenes/Levels/Levels/Escape.unity
+    guid: b9c70f5236118ac4ab7a15ea7be403e4
   - enabled: 1
     path: Assets/Scenes/MainMenu/Win.unity
     guid: a0edfeebd6f3f2044b7bc205fe979ef4

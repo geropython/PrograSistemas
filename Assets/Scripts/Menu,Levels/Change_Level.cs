@@ -7,6 +7,6 @@ public class Change_Level : MonoBehaviour
 {
    public void ChangeLevel()
     {
-        SceneManager.LoadScene("Level2");
+        SceneManager.LoadScene("Escape");
     }
 }

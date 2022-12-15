@@ -213,7 +213,7 @@ MonoBehaviour:
   _projectile: {fileID: 130460614728265706, guid: d237973a262ef9e42abf6170aa6f886a, type: 3}
   _timerChaseInSeconds: 0
   walkPointRange: 0
-  timeBetweenAttacks: 2
+  timeBetweenAttacks: 1
   playerInSightRange: 0
   playerInAttackRange: 0
   enemyAlarmRange: 0

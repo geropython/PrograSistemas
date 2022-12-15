@@ -6,11 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class deathZone : MonoBehaviour
 {
+    [SerializeField] GameObject defeatCanvas;
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.layer == 8)
+        if (other.gameObject.layer == 7)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            defeatCanvas.SetActive(true);
+            //Time.timeScale = 0f;
+            Cursor.lockState = CursorLockMode.None;
         }
     }
 }

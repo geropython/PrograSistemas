@@ -8,5 +8,7 @@ public class winZone : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         SceneManager.LoadScene("Win");
+        Time.timeScale = 0f;
+        Cursor.lockState = CursorLockMode.None;
     }
 }
