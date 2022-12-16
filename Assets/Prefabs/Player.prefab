@@ -12702,7 +12702,7 @@ MonoBehaviour:
   timeBetweenShots: 1
   whatIsEnemy:
     serializedVersion: 2
-    m_Bits: 4608
+    m_Bits: 4672
   bulletHoleGraphic: {fileID: 1000010355441670, guid: 02a509a7fa70ed740ba4197e20c5d32d, type: 3}
   crosshair: {fileID: 0}
   cooldownTime: 2
@@ -18646,7 +18646,7 @@ MonoBehaviour:
   timeBetweenShots: 1
   whatIsEnemy:
     serializedVersion: 2
-    m_Bits: 4736
+    m_Bits: 4672
   bulletHoleGraphic: {fileID: 1000010355441670, guid: 02a509a7fa70ed740ba4197e20c5d32d, type: 3}
   crosshair: {fileID: 0}
   cooldownTime: 2
