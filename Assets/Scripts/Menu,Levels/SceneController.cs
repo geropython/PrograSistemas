@@ -16,19 +16,30 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
-    public void Continue()
+    public void SecondTutorial()
     {
         //Escape
         Cursor.lockState = CursorLockMode.Locked;
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(6);
     }
 
-    public void StartGame()
+    public void FirstTutorial()
     {
         //Level1
         Cursor.lockState = CursorLockMode.Locked;
+        SceneManager.LoadScene(5);
+    }
+
+    public void Level2()
+    {
+        SceneManager.LoadScene(2);
+    }
+
+    public void Level1()
+    {
         SceneManager.LoadScene(1);
-    } 
+    }
+
     public void Controls()
     {
         panel.SetActive(true);
