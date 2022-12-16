@@ -12697,7 +12697,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 50
   spread: 0
-  range: 20
+  range: 1000
   reloadTime: 1
   timeBetweenShots: 1
   whatIsEnemy:
@@ -18641,7 +18641,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 100
   spread: 0
-  range: 30
+  range: 1000
   reloadTime: 1
   timeBetweenShots: 1
   whatIsEnemy:

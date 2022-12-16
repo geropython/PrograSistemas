@@ -22456,6 +22456,10 @@ PrefabInstance:
       value: 4672
       objectReference: {fileID: 0}
     - target: {fileID: 754852772733420221, guid: eb7ac44993f7e3f42ae193479c8ccee5, type: 3}
+      propertyPath: range
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 754852772733420221, guid: eb7ac44993f7e3f42ae193479c8ccee5, type: 3}
       propertyPath: whatIsEnemy.m_Bits
       value: 4672
       objectReference: {fileID: 0}
