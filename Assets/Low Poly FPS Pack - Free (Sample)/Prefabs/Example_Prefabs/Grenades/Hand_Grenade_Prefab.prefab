@@ -31,7 +31,8 @@ Transform:
   m_GameObject: {fileID: 1948591290861370}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -227,6 +228,6 @@ MonoBehaviour:
   explosionPrefab: {fileID: 4811645123968692, guid: 301583a5af63a494298d60cd9f296909, type: 3}
   radius: 5
   power: 3500
-  minimumForce: 600
-  maximumForce: 700
+  minimumForce: 1000
+  maximumForce: 1000
   impactSound: {fileID: 82305533685823640}

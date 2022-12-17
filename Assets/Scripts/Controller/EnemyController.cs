@@ -190,10 +190,14 @@ public class EnemyController : MonoBehaviour
 
         if (!alreadyAttacked)
         {
+            Debug.Log(_projectile.name);
             Rigidbody rb = Instantiate(_projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
 
-            rb.AddForce(transform.forward * 16f, ForceMode.Impulse);
-            rb.AddForce(transform.up * 4f, ForceMode.Impulse);
+            rb.AddForce(transform.forward * 50f, ForceMode.Impulse);
+            rb.AddForce(transform.up * 1f, ForceMode.Impulse);
+
+            //rb.AddForce(transform.forward * 16f, ForceMode.Impulse);
+            //rb.AddForce(transform.up * 4f, ForceMode.Impulse);
 
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
