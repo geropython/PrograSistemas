@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class ShowTutorial : MonoBehaviour
 {
-    [SerializeField] private GameObject _showMessage;
-    [SerializeField] private GameObject _hiddeMessage = null;
-
+    [SerializeField] private GameObject _showMessage = null;
+    [SerializeField] private GameObject _canvasTutorial = null;
 
     private void OnTriggerEnter(Collider other)
     {
 
-        if (_hiddeMessage)
+        foreach (Transform t in _canvasTutorial.transform)
         {
-        _hiddeMessage.SetActive(false);
+            t.gameObject.SetActive(false);
+
         }
-        _showMessage.SetActive(true);
-        Debug.Log("Hola");
+
+        if (_showMessage) _showMessage.SetActive(true);
     }
 }
