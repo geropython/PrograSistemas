@@ -7,7 +7,7 @@ public class GrenadeScript : MonoBehaviour {
 	[Header("Timer")]
 	//Time before the grenade explodes
 	[Tooltip("Time before the grenade explodes")]
-	public float grenadeTimer = 5.0f;
+	public float grenadeTimer = 4.0f;
 
 	[Header("Explosion Prefabs")]
 	//Explosion prefab
@@ -23,9 +23,9 @@ public class GrenadeScript : MonoBehaviour {
 
 	[Header("Throw Force")]
 	[Tooltip("Minimum throw force")]
-	public float minimumForce = 1500.0f;
+	public float minimumForce = 6000.0f;
 	[Tooltip("Maximum throw force")]
-	public float maximumForce = 2500.0f;
+	public float maximumForce = 6000.0f;
 	private float throwForce;
 
 	[Header("Audio")]
@@ -105,12 +105,12 @@ public class GrenadeScript : MonoBehaviour {
 
 			if (hit.GetComponent<Collider>().tag == "Enemy")
 			{
-				hit.GetComponent<Bot>().TakeDamage(60);
+				hit.GetComponent<Bot>().TakeDamage(100);
 			}
 
 			if (hit.GetComponent<Collider>().tag == "Boss")
             {
-				hit.GetComponent<BossScript>().HP_Min -= 60f;
+				hit.GetComponent<BossScript>().HP_Min -= 100f;
             }
 		}
 

@@ -12695,7 +12695,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e56ac14cb72efeb4b92cf5cb025a97c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 50
+  damage: 40
   spread: 0
   range: 1000
   reloadTime: 1
@@ -12722,7 +12722,7 @@ MonoBehaviour:
   bulletForce: 400
   showBulletInMagDelay: 0.6
   bulletInMagRenderer: {fileID: 137618897785935086}
-  grenadeSpawnDelay: 0.35
+  grenadeSpawnDelay: 0.7
   randomMuzzleflash: 1
   maxRandomValue: 2
   enableMuzzleflash: 1
@@ -18639,7 +18639,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd38df9a0796d9842adfbe580ed6042e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 100
+  damage: 60
   spread: 0
   range: 1000
   reloadTime: 1
