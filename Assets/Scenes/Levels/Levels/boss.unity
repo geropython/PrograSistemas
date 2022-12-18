@@ -21715,6 +21715,14 @@ PrefabInstance:
       propertyPath: barra
       value: 
       objectReference: {fileID: 579485979}
+    - target: {fileID: 5319563322754311014, guid: 0b3de68c9070aaa48ab92c4915df8c29, type: 3}
+      propertyPath: HP_Max
+      value: 4000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5319563322754311014, guid: 0b3de68c9070aaa48ab92c4915df8c29, type: 3}
+      propertyPath: HP_Min
+      value: 4000
+      objectReference: {fileID: 0}
     - target: {fileID: 5319563322770577352, guid: 0b3de68c9070aaa48ab92c4915df8c29, type: 3}
       propertyPath: damage
       value: 25
