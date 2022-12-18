@@ -30,7 +30,7 @@ public class UIManager : MonoBehaviour
     void Update()
     {
         lifebar.fillAmount = player.CurrentLife / 100f;
-        lavaBar.fillAmount = 1 - (checkDistance._distance / 100);
+        if (lavaBar && checkDistance) lavaBar.fillAmount = 1 - (checkDistance._distance / 100);
         if (weapon != null && weapon.gameObject.activeInHierarchy )
             ammoText.text = $"{weapon.CurrentAmmo}/{weapon.ammo}";
         else if (pistol != null && pistol.gameObject.activeInHierarchy )
