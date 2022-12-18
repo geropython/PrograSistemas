@@ -36237,6 +36237,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114919996929097380, guid: eb7ac44993f7e3f42ae193479c8ccee5, type: 3}
+      propertyPath: range
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 114919996929097380, guid: eb7ac44993f7e3f42ae193479c8ccee5, type: 3}
       propertyPath: damage
       value: 40
       objectReference: {fileID: 0}
@@ -36255,6 +36259,10 @@ PrefabInstance:
     - target: {fileID: 754852772733420221, guid: eb7ac44993f7e3f42ae193479c8ccee5, type: 3}
       propertyPath: range
       value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 754852772733420221, guid: eb7ac44993f7e3f42ae193479c8ccee5, type: 3}
+      propertyPath: damage
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 754852772733420221, guid: eb7ac44993f7e3f42ae193479c8ccee5, type: 3}
       propertyPath: crosshair
