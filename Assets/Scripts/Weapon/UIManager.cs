@@ -6,11 +6,16 @@ using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
+    public Animator anim;
+    public int levelToFade;
+
     public Actor player;
     public AutomaticGunScriptLPFP weapon;
     public HandgunScriptLPFP pistol;
+    
     public BossScript boss;
     public BossScript boss2;
+    
     [SerializeField] GameObject victoryCanvas;
     [SerializeField] GameObject defeatCanvas;
     [SerializeField] Image lifebar;
@@ -20,7 +25,6 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 1f;
         player = GameObject.Find("Player").GetComponent<Actor>();
         weapon = GameObject.Find("Player").GetComponentInChildren<AutomaticGunScriptLPFP>();
-        //pistol = GameObject.Find("Player").GetComponentInChildren<HandgunScriptLPFP>();
     }
 
     // Update is called once per frame
@@ -37,9 +41,8 @@ public class UIManager : MonoBehaviour
             if (boss == null) return;
             if (boss.finishedDeathAnim)
             {
-                SceneManager.LoadScene("Escape");
-                //Time.timeScale = 0f;
-                //Cursor.lockState = CursorLockMode.None;
+                    SceneManager.LoadScene("Escape");
+                    FadeToLevel();
             }
            
         }else if (boss2 != null)
@@ -52,10 +55,15 @@ public class UIManager : MonoBehaviour
             }
         }
          if (player.CurrentLife <= 0f)
-        {
+         {
             defeatCanvas.SetActive(true);
             Time.timeScale = 0f;
             Cursor.lockState = CursorLockMode.None;
-        }
+         }
+    }
+    private void FadeToLevel()
+    {
+        anim.SetTrigger("FadeOut");
+       
     }
 }

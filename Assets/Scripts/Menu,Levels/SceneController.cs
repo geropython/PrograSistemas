@@ -29,7 +29,10 @@ public class SceneController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         SceneManager.LoadScene(5);
     }
-
+    public void Level3()
+    {
+        SceneManager.LoadScene(3);
+    }
     public void Level2()
     {
         SceneManager.LoadScene(2);

@@ -5,12 +5,26 @@ using UnityEngine.SceneManagement;
 
 public class transitionLevel : MonoBehaviour
 {
+    public Animator anim;
+    public int levelToFade;
+
     //Tutorial Level1
-        private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Player")
         {
-            if (collision.gameObject.tag == "Player")
-            {
-                SceneManager.LoadScene(1);
-            }
+            FadeToLevel(1);
         }
+    }
+
+    private void FadeToLevel(int levelIndex)
+    {
+        anim.SetTrigger("FadeOut");
+        levelToFade = levelIndex;
+    }
+
+    public void OnFadeComplete()
+    {
+        SceneManager.LoadScene(levelToFade);
+    }
 }
