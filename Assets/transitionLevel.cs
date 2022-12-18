@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class transitionLevel1 : MonoBehaviour
+public class transitionLevel : MonoBehaviour
 {
     //Tutorial Level1
         private void OnCollisionEnter(Collision collision)
