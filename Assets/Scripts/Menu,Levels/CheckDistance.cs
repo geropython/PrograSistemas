@@ -12,7 +12,8 @@ public class CheckDistance : MonoBehaviour
     {
         _distance = (transform.position.y - _checkPoint.transform.position.y) - 1;
 
-        _distanceText.text = "La lava se acerca" + _distance.ToString("F1");
+        //En caso de querer mostrar la distancia en canvas descomentar esto
+       // _distanceText.text = "La lava se acerca" + _distance.ToString("F1");
     }
 
 }
