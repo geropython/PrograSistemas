@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -21,7 +22,7 @@ public class transitionLevel2 : MonoBehaviour
     private void FadeToLevel(int levelIndex)
     {
         anim.SetTrigger("FadeOut");
-        levelToFade = levelIndex;
+        Invoke(nameof(OnFadeComplete), 2);
     }
 
     public void OnFadeComplete()
