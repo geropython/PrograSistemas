@@ -14,12 +14,15 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject victoryCanvas;
     [SerializeField] GameObject defeatCanvas;
     [SerializeField] Image lifebar;
+    [SerializeField] Image lavaBar;
+    [SerializeField] CheckDistance checkDistance;
     [SerializeField] Text ammoText;
     void Start()
     {
         Time.timeScale = 1f;
         player = GameObject.Find("Player").GetComponent<Actor>();
         weapon = GameObject.Find("Player").GetComponentInChildren<AutomaticGunScriptLPFP>();
+
         //pistol = GameObject.Find("Player").GetComponentInChildren<HandgunScriptLPFP>();
     }
 
@@ -27,6 +30,7 @@ public class UIManager : MonoBehaviour
     void Update()
     {
         lifebar.fillAmount = player.CurrentLife / 100f;
+        lavaBar.fillAmount = checkDistance._distance / 100;
         if (weapon != null && weapon.gameObject.activeInHierarchy )
             ammoText.text = $"{weapon.CurrentAmmo}/{weapon.ammo}";
         else if (pistol != null && pistol.gameObject.activeInHierarchy )

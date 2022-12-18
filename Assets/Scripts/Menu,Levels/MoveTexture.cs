@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class MoveTexture : MonoBehaviour
 {
-    public float scrollSpeed = 0.1f;
+    [SerializeField] private float scrollSpeed = 0.1f;
+
+
     Renderer rend;
+    
     void Start()
     {
         rend = GetComponent<Renderer>();
