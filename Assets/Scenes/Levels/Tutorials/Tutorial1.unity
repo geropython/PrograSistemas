@@ -36429,15 +36429,6 @@ MonoBehaviour:
     - Presiona
     E para bajar el arma y vuelve a presionarlo para subirla
 
-
-    Melee:
-
-
-    -
-    F para primer ataque de cuchillo
-
-    - Q para segundo ataque de cuchillo
-
 '
 --- !u!222 &2066229395
 CanvasRenderer:
