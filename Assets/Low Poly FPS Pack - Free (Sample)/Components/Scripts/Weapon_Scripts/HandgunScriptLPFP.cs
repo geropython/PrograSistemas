@@ -165,6 +165,7 @@ public class HandgunScriptLPFP : MonoBehaviour {
 		public AudioClip reloadSoundOutOfAmmo;
 		public AudioClip reloadSoundAmmoLeft;
 		public AudioClip aimSound;
+		public AudioClip hitSound;
 	}
 	public soundClips SoundClips;
 

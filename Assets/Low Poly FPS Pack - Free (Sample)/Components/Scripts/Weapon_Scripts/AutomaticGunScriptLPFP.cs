@@ -166,6 +166,7 @@ public class AutomaticGunScriptLPFP : MonoBehaviour {
 		public AudioClip reloadSoundOutOfAmmo;
 		public AudioClip reloadSoundAmmoLeft;
 		public AudioClip aimSound;
+		public AudioClip hitSound;
 	}
 	public soundClips SoundClips;
 
@@ -435,6 +436,10 @@ public class AutomaticGunScriptLPFP : MonoBehaviour {
 
 				if (Physics.Raycast(gunCamera.transform.position, direction, out rayHit, range, whatIsEnemy))
 				{
+
+					mainAudioSource.clip = SoundClips.hitSound;
+					mainAudioSource.Play();
+
 					Debug.Log(rayHit.collider.name);
 
 					if (rayHit.collider.CompareTag("Enemy"))
