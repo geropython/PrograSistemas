@@ -17,6 +17,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] Image lavaBar;
     [SerializeField] CheckDistance checkDistance;
     [SerializeField] Text ammoText;
+    [SerializeField] GameObject introCanvas;
     void Start()
     {
         Time.timeScale = 1f;
@@ -29,13 +30,28 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //INTRO CANVAS
+        if (introCanvas)
+        {
+            if (Input.GetKeyDown("t"))
+            {
+                introCanvas.gameObject.SetActive(false);
+            }
+        }
+
+        // LIFE BAR
         lifebar.fillAmount = player.CurrentLife / 100f;
+        
+        //LAVA BAR
         if (lavaBar && checkDistance) lavaBar.fillAmount = 1 - (checkDistance._distance / 100);
+        
+        // WEAPON AMMO
         if (weapon != null && weapon.gameObject.activeInHierarchy )
             ammoText.text = $"{weapon.CurrentAmmo}/{weapon.ammo}";
         else if (pistol != null && pistol.gameObject.activeInHierarchy )
             ammoText.text = $"{pistol.CurrentAmmo}/{pistol.ammo}";
 
+        //BOSS ACTIONS
         if (SceneManager.GetActiveScene().name == "boss")
         if (boss2 == null) {
             if (boss == null) return;
@@ -55,6 +71,8 @@ public class UIManager : MonoBehaviour
                 Cursor.lockState = CursorLockMode.None;
             }
         }
+
+        // DEFEAT CANVAS
          if (player.CurrentLife <= 0f)
         {
             defeatCanvas.SetActive(true);
