@@ -681,6 +681,10 @@ PrefabInstance:
       propertyPath: m_Volume
       value: 0.05
       objectReference: {fileID: 0}
+    - target: {fileID: 8206476270257563325, guid: dd6e2d5edb38bc142b7c3a21225de406, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: f41e904b333393f40af393383a73fdf1, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd6e2d5edb38bc142b7c3a21225de406, type: 3}
 --- !u!1 &57902999
@@ -1468,9 +1472,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 114919996929097380, guid: eb7ac44993f7e3f42ae193479c8ccee5, type: 3}
+      propertyPath: crosshair
+      value: 
+      objectReference: {fileID: 1635893209}
+    - target: {fileID: 114919996929097380, guid: eb7ac44993f7e3f42ae193479c8ccee5, type: 3}
       propertyPath: whatIsEnemy.m_Bits
       value: 4672
       objectReference: {fileID: 0}
+    - target: {fileID: 754852772733420221, guid: eb7ac44993f7e3f42ae193479c8ccee5, type: 3}
+      propertyPath: crosshair
+      value: 
+      objectReference: {fileID: 1635893209}
     - target: {fileID: 754852772733420221, guid: eb7ac44993f7e3f42ae193479c8ccee5, type: 3}
       propertyPath: whatIsEnemy.m_Bits
       value: 4672
@@ -7175,6 +7187,7 @@ MonoBehaviour:
   lavaBar: {fileID: 1977797371}
   checkDistance: {fileID: 1983048860}
   ammoText: {fileID: 615993043}
+  introCanvas: {fileID: 0}
 --- !u!4 &604889108
 Transform:
   m_ObjectHideFlags: 0
@@ -22874,6 +22887,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 497318, guid: 1acf2995551e93f4fb86449e38b67314, type: 3}
   m_PrefabInstance: {fileID: 1633897791}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1635893209 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 768174730, guid: 339fdca915c898e41938383eb8b12962, type: 3}
+  m_PrefabInstance: {fileID: 6651590132096286854}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1639936405
 PrefabInstance:
