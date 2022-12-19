@@ -11684,7 +11684,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20babd4ec86f63f41a9762b580865778, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 0
+  scrollSpeed: 0.1
 --- !u!114 &680223549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17687,9 +17687,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Te han traicionado, tu tripulaci\xF3n te abandono en un inh\xF3spito planeta
-    que al ser tan inestable lo usan de chatarrer\xEDa y fundici\xF3n. \nLa lava
-    abunda y es instable, pero deber\xE1s atravesarla si quieres llegar a la nave
-    de emergencia para escapar. "
+    que lo usan de chatarrer\xEDa y fundici\xF3n. \nLa lava abunda y es inestable,
+    pero deber\xE1s atravesarla si quieres llegar a la nave de emergencia para escapar."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fff25cdc7ce4ba14d84c6d4001174590, type: 2}
   m_sharedMaterial: {fileID: 8583280847657066282, guid: fff25cdc7ce4ba14d84c6d4001174590, type: 2}
@@ -20155,7 +20154,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1227169318
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22960,7 +22959,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20babd4ec86f63f41a9762b580865778, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 0
+  scrollSpeed: 0.1
 --- !u!114 &1341336469
 MonoBehaviour:
   m_ObjectHideFlags: 0

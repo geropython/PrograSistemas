@@ -4319,10 +4319,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3590237534949552786, guid: cb5912ac3015d474ea4ad5b8468aedf0, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3590237534969550369, guid: cb5912ac3015d474ea4ad5b8468aedf0, type: 3}
       propertyPath: _canvasTutorial
       value: 
       objectReference: {fileID: 2112883429}
+    - target: {fileID: 3590237535498428867, guid: cb5912ac3015d474ea4ad5b8468aedf0, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3590237535537268139, guid: cb5912ac3015d474ea4ad5b8468aedf0, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -4374,6 +4382,34 @@ PrefabInstance:
     - target: {fileID: 3590237535613029581, guid: cb5912ac3015d474ea4ad5b8468aedf0, type: 3}
       propertyPath: m_Name
       value: Mapa
+      objectReference: {fileID: 0}
+    - target: {fileID: 3590237535973237887, guid: cb5912ac3015d474ea4ad5b8468aedf0, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3590237536022925592, guid: cb5912ac3015d474ea4ad5b8468aedf0, type: 3}
+      propertyPath: defeatCanvas
+      value: 
+      objectReference: {fileID: 1985038559}
+    - target: {fileID: 3590237536022925593, guid: cb5912ac3015d474ea4ad5b8468aedf0, type: 3}
+      propertyPath: scrollSpeed
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 3590237536022925596, guid: cb5912ac3015d474ea4ad5b8468aedf0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.00000035762784
+      objectReference: {fileID: 0}
+    - target: {fileID: 3590237536022925596, guid: cb5912ac3015d474ea4ad5b8468aedf0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3590237536022925596, guid: cb5912ac3015d474ea4ad5b8468aedf0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 3590237536319710309, guid: cb5912ac3015d474ea4ad5b8468aedf0, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3590237536320735290, guid: cb5912ac3015d474ea4ad5b8468aedf0, type: 3}
       propertyPath: m_Enabled
