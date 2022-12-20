@@ -348,10 +348,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4859093805432904392}
     m_Modifications:
-    - target: {fileID: 3459927022368868909, guid: 018beba761be1d84a8eb8803ec99271c, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6903650204625525013, guid: 018beba761be1d84a8eb8803ec99271c, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -400,12 +396,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Robo1Enemy
       objectReference: {fileID: 0}
-    - target: {fileID: 6903650204635313903, guid: 018beba761be1d84a8eb8803ec99271c, type: 3}
-      propertyPath: m_ApplyRootMotion
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2147413195, guid: 018beba761be1d84a8eb8803ec99271c, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 018beba761be1d84a8eb8803ec99271c, type: 3}
 --- !u!4 &6270665593215095242 stripped
 Transform:
