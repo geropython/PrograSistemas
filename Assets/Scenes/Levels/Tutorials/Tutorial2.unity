@@ -768,7 +768,7 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: Sientes un temblor... notas que la lava se mueve mas rapido, parece que
-    va a comenzar a subir en cualquier momento.
+    comenzara a subir en cualquier momento.
 --- !u!222 &258338414
 CanvasRenderer:
   m_ObjectHideFlags: 0
